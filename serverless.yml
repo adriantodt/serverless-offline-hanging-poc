@@ -1,0 +1,16 @@
+service: poc
+plugins:
+  - serverless-appsync-plugin
+  - serverless-offline
+provider: aws
+
+functions:
+  hello:
+    name: poc-hello
+    description: 'Hello, World!'
+    handler: dist/hello.handler
+    package:
+      exclude: [ "*", "**/**" ]
+      include:
+        - dist/hello.js
+        - dist/hello.js.map
