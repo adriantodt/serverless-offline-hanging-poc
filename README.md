@@ -36,7 +36,7 @@ serverless-offline-hanging-poc$ aws lambda invoke /dev/null --endpoint-url http:
 Read timeout on endpoint URL: "http://localhost:3002/2015-03-31/functions/poc-hello/invocations"
 ```
 
-The lambda should've returned `"Hello, World!"`, but it never returns.
+The lambda should've returned `{"text":"Hello, World!"}`, but it never returns.
 
 This was first reproduced trying to run `serverless-appsync-simulator`, but I managed to reproduce with just `serverless-offline` on my machine.
 
